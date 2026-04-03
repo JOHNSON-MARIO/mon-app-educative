@@ -1,52 +1,55 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <title>Prépa BEPC</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mon App Éducation</title>
+
+<link rel="stylesheet" href="style.css">
+<link rel="manifest" href="manifest.json">
 </head>
+
 <body>
 
-<header>
-  <h1>📚 Prépa BEPC</h1>
-</header>
+<div id="app">
 
-<main>
-  <section id="classes">
-    <h2>Choisir une classe</h2>
-    <button onclick="selectClasse('6e')">6e</button>
-    <button onclick="selectClasse('5e')">5e</button>
-    <button onclick="selectClasse('4e')">4e</button>
-    <button onclick="selectClasse('3e')">3e</button>
-  </section>
+  <!-- LOGIN -->
+  <div id="login">
+    <h2>Connexion</h2>
+    <input type="text" id="username" placeholder="Nom">
+    <button onclick="login()">Se connecter</button>
+  </div>
 
-  <section id="matieres" class="hidden">
-    <h2>Matières</h2>
-    <button onclick="loadCours('Maths')">Maths</button>
-    <button onclick="loadCours('Français')">Français</button>
-    <button onclick="loadCours('Anglais')">Anglais</button>
-    <button onclick="loadCours('SVT')">SVT</button>
-    <button onclick="loadCours('Physique')">Physique</button>
-  </section>
+  <!-- APP -->
+  <div id="dashboard" class="hidden">
+    <header>
+      <h1>📚 Mon App Éducation</h1>
+      <button onclick="logout()">Déconnexion</button>
+    </header>
 
-  <section id="cours" class="hidden">
-    <h2 id="titreCours"></h2>
-    <p id="contenuCours"></p>
-    <button onclick="startQuiz()">Faire le quiz</button>
-  </section>
+    <div class="card">
+      <h2>Choisir une classe</h2>
+      <div class="grid">
+        <button onclick="selectClasse('6e')">6e</button>
+        <button onclick="selectClasse('5e')">5e</button>
+        <button onclick="selectClasse('4e')">4e</button>
+        <button onclick="selectClasse('3e')">3e</button>
+      </div>
+    </div>
 
-  <section id="quiz" class="hidden">
-    <h2>Quiz</h2>
-    <p id="question"></p>
-    <div id="answers"></div>
-    <button onclick="nextQuestion()">Suivant</button>
-  </section>
+    <div id="matieres" class="card hidden"></div>
 
-  <section id="resultat" class="hidden">
-    <h2>Résultat</h2>
-    <p id="score"></p>
-  </section>
-</main>
+    <div id="cours" class="card hidden">
+      <h2 id="titreCours"></h2>
+      <p id="contenuCours"></p>
+      <button onclick="startQuiz()">Commencer Quiz</button>
+    </div>
+
+    <div id="quiz" class="card hidden"></div>
+
+  </div>
+
+</div>
 
 <script src="script.js"></script>
 </body>
