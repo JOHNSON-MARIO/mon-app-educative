@@ -1,22 +1,50 @@
 let currentClasse = "";
 let score = 0;
-let currentQuestion = 0;
+let index = 0;
 
-const quizData = [
+const quiz = [
   {
-    question: "Combien font 2 + 2 ?",
-    answers: ["3", "4", "5"],
+    q: "2 + 2 = ?",
+    a: ["3", "4", "5"],
     correct: 1
-  },
-  {
-    question: "Quelle est la capitale de la France ?",
-    answers: ["Paris", "Londres", "Berlin"],
-    correct: 0
   }
 ];
 
+// LOGIN
+function login() {
+  const user = document.getElementById("username").value;
+  if (user) {
+    localStorage.setItem("user", user);
+    showApp();
+  }
+}
+
+function logout() {
+  localStorage.removeItem("user");
+  location.reload();
+}
+
+function showApp() {
+  document.getElementById("login").classList.add("hidden");
+  document.getElementById("dashboard").classList.remove("hidden");
+}
+
+// AUTO LOGIN
+if (localStorage.getItem("user")) {
+  showApp();
+}
+
+// APP
 function selectClasse(classe) {
   currentClasse = classe;
+  const matieres = ["Maths", "Français", "Anglais", "SVT"];
+  
+  let html = "<h2>Matières</h2>";
+  matieres.forEach(m => {
+    html += `<button onclick="loadCours('${m}')">${m}</button>`;
+  });
+
+  document.getElementById("matieres").innerHTML = html;
   document.getElementById("matieres").classList.remove("hidden");
 }
 
@@ -24,40 +52,34 @@ function loadCours(matiere) {
   document.getElementById("cours").classList.remove("hidden");
   document.getElementById("titreCours").innerText = matiere;
   document.getElementById("contenuCours").innerText =
-    "Voici un exemple de cours de " + matiere;
+    "Cours de " + matiere + " pour la classe de " + currentClasse;
 }
 
 function startQuiz() {
-  document.getElementById("quiz").classList.remove("hidden");
+  index = 0;
   showQuestion();
 }
 
 function showQuestion() {
-  let q = quizData[currentQuestion];
-  document.getElementById("question").innerText = q.question;
-
-  let answersDiv = document.getElementById("answers");
-  answersDiv.innerHTML = "";
-
-  q.answers.forEach((answer, index) => {
-    let btn = document.createElement("button");
-    btn.innerText = answer;
-    btn.onclick = () => {
-      if (index === q.correct) score++;
-    };
-    answersDiv.appendChild(btn);
+  let q = quiz[index];
+  let html = `<h3>${q.q}</h3>`;
+  
+  q.a.forEach((ans, i) => {
+    html += `<button onclick="answer(${i})">${ans}</button>`;
   });
+
+  document.getElementById("quiz").innerHTML = html;
+  document.getElementById("quiz").classList.remove("hidden");
 }
 
-function nextQuestion() {
-  currentQuestion++;
+function answer(i) {
+  if (i === quiz[index].correct) score++;
+  index++;
 
-  if (currentQuestion < quizData.length) {
+  if (index < quiz.length) {
     showQuestion();
   } else {
-    document.getElementById("quiz").classList.add("hidden");
-    document.getElementById("resultat").classList.remove("hidden");
-    document.getElementById("score").innerText =
-      "Score: " + score + "/" + quizData.length;
+    document.getElementById("quiz").innerHTML =
+      `<h2>Score: ${score}</h2>`;
   }
 }
