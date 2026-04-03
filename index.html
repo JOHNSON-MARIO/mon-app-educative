@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Prépa BEPC</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>📚 Prépa BEPC</h1>
+</header>
+
+<main>
+  <section id="classes">
+    <h2>Choisir une classe</h2>
+    <button onclick="selectClasse('6e')">6e</button>
+    <button onclick="selectClasse('5e')">5e</button>
+    <button onclick="selectClasse('4e')">4e</button>
+    <button onclick="selectClasse('3e')">3e</button>
+  </section>
+
+  <section id="matieres" class="hidden">
+    <h2>Matières</h2>
+    <button onclick="loadCours('Maths')">Maths</button>
+    <button onclick="loadCours('Français')">Français</button>
+    <button onclick="loadCours('Anglais')">Anglais</button>
+    <button onclick="loadCours('SVT')">SVT</button>
+    <button onclick="loadCours('Physique')">Physique</button>
+  </section>
+
+  <section id="cours" class="hidden">
+    <h2 id="titreCours"></h2>
+    <p id="contenuCours"></p>
+    <button onclick="startQuiz()">Faire le quiz</button>
+  </section>
+
+  <section id="quiz" class="hidden">
+    <h2>Quiz</h2>
+    <p id="question"></p>
+    <div id="answers"></div>
+    <button onclick="nextQuestion()">Suivant</button>
+  </section>
+
+  <section id="resultat" class="hidden">
+    <h2>Résultat</h2>
+    <p id="score"></p>
+  </section>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
