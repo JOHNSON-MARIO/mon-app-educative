@@ -1,7 +1,17 @@
 body {
   margin: 0;
-  font-family: 'Segoe UI';
-  background: #f1f5f9;
+  font-family: 'Segoe UI', sans-serif;
+  background: url("bg.jpg") no-repeat center center fixed;
+  background-size: cover;
+  height: 100vh;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6); /* overlay pour lisibilité */
+  z-index: -1;
 }
 
 header {
