@@ -1,0 +1,40 @@
+{
+  "version": "1.0",
+  "lastUpdate": "2026-04-04",
+  "levels": {
+    "6e": {
+      "subjects": {
+        "maths": {
+          "name": "Mathématiques",
+          "competencies": [
+            {
+              "id": "calc_01",
+              "name": "Calculer et raisonner",
+              "themes": [
+                {
+                  "id": "calc_01_th01",
+                  "name": "Nombres et opérations",
+                  "lessons": [
+                    {
+                      "id": "calc_01_th01_l01",
+                      "title": "Les nombres décimaux",
+                      "objectives": ["Définir", "Comparer", "Placer sur une droite"],
+                      "content": {
+                        "theory": "Un nombre décimal est un nombre qui peut s'écrire...",
+                        "examples": ["3,14", "0,5", "12,001"],
+                        "exercises": [
+                          {"question": "Quel est le chiffre des dixièmes dans 4,27 ?", "answer": "2"}
+                        ]
+                      },
+                      "quiz": { "questions": 10, "passingScore": 7 }
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      }
+    }
+  }
+}
