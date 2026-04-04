@@ -1,101 +1,126 @@
+/* ===== VARIABLES & RESET ===== */
+:root {
+  --primary-gradient: linear-gradient(135deg, #4f46e5, #3b82f6);
+  --button-color: #3498db;
+  --button-hover: #2980b9;
+  --glass-bg: rgba(255, 255, 255, 0.85);
+  --shadow-sm: 0 4px 10px rgba(0,0,0,0.2);
+  --shadow-md: 0 4px 15px rgba(0,0,0,0.1);
+  --border-radius: 10px;
+  --transition: all 0.3s ease;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 /* ===== BODY & BACKGROUND ===== */
 body {
-  margin: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background: url("bg.jpg") no-repeat center center fixed;
-  background-size: cover;
-  height: 100vh;
-  color: #fff; /* texte lisible par défaut */
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  background: url("bg.jpg") no-repeat center/cover fixed;
+  min-height: 100vh;
+  color: #fff;
   overflow-x: hidden;
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  line-height: 1.6;
 }
 
-/* Overlay sombre pour lisibilité */
+/* Overlay */
 body::before {
   content: "";
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, 0.5); /* plus léger que 0.6 pour ne pas assombrir trop */
+  background: rgba(0, 0, 0, 0.5);
   z-index: -1;
+  transition: var(--transition);
 }
 
 /* ===== HEADER ===== */
 header {
-  background: linear-gradient(135deg, #4f46e5, #3b82f6); /* plus moderne */
+  background: var(--primary-gradient);
   color: white;
-  padding: 15px;
+  padding: 1rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
+  box-shadow: var(--shadow-sm);
+  border-radius: 0 0 var(--border-radius) var(--border-radius);
+  position: relative;
+  z-index: 10;
 }
 
-/* ===== BUTTON ===== */
+/* ===== BUTTONS ===== */
 button {
-  margin: 10px 5px;
-  padding: 10px 20px;
+  margin: 0.5rem;
+  padding: 0.6rem 1.2rem;
   border: none;
-  background: #3498db;
+  background: var(--button-color);
   color: white;
-  border-radius: 8px; /* plus moderne */
+  border-radius: var(--border-radius);
   cursor: pointer;
-  transition: background 0.3s, transform 0.2s;
+  transition: var(--transition);
+  font-weight: 500;
+  font-size: 0.9rem;
 }
 
 button:hover {
-  background: #2980b9;
-  transform: scale(1.05); /* effet léger au survol */
+  background: var(--button-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+button:active {
+  transform: translateY(0);
 }
 
 /* ===== CARDS ===== */
 .card {
-  background: rgba(255, 255, 255, 0.85); /* glass effect */
+  background: var(--glass-bg);
   backdrop-filter: blur(8px);
-  border-radius: 15px;
-  padding: 20px;
-  margin: 15px;
-  color: #000;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  -webkit-backdrop-filter: blur(8px);
+  border-radius: calc(var(--border-radius) + 5px);
+  padding: 1.5rem;
+  margin: 1rem;
+  color: #333;
+  box-shadow: var(--shadow-md);
+  transition: var(--transition);
 }
 
-/* ===== GRID ===== */
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+/* ===== GRID SYSTEM ===== */
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-  gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+  padding: 1rem;
 }
 
 /* ===== INPUTS ===== */
 input {
-  padding: 10px;
-  margin: 10px 0;
+  padding: 0.6rem 1rem;
+  border-radius: var(--border-radius);
+  border: none;
+  outline: none;
+  font-size: 0.9rem;
   width: 100%;
-  max-width: 300px;
-  border-radius: 8px;
-  border: 1px solid #ccc;
-}
-
-/* ===== HIDDEN ===== */
-.hidden {
-  display: none;
+  margin: 0.5rem 0;
 }
 
 /* ===== RESPONSIVE ===== */
-@media (max-width: 768px) {
-  .grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
+@media (max-width: 600px) {
   header {
     flex-direction: column;
     text-align: center;
   }
+
   button {
     width: 100%;
-    max-width: 200px;
-    margin: 5px auto;
   }
 }
