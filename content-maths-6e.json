@@ -1,0 +1,165 @@
+{
+  "meta": {
+    "version": "1.0.0",
+    "subject": "Mathématiques",
+    "level": "6e",
+    "academicYear": "2025-2026",
+    "lastUpdated": "2026-04-04",
+    "language": "fr-FR"
+  },
+  "competencies": [
+    {
+      "id": "comp_nombres_calcul",
+      "name": "Maîtriser les nombres et le calcul",
+      "description": "Comprendre, représenter et effectuer des calculs avec des nombres décimaux et des fractions.",
+      "themes": [
+        {
+          "id": "th_decimaux",
+          "name": "Les nombres décimaux",
+          "lessons": [
+            {"id": "n1_l1", "title": "Comprendre la valeur des chiffres", "objectives": ["Distinguer partie entière et décimale", "Connaître les rangs (dixièmes, centièmes, millièmes)"], "content": {"theory": "Un nombre décimal s'écrit avec une virgule. Chaque chiffre a une valeur selon sa position.", "examples": ["Dans 45,27 : 4=dizaines, 5=unités, 2=dixièmes, 7=centièmes"], "tips": "Utiliser un tableau de numération pour visualiser."}, "quiz": {"count": 10, "passingScore": 7, "difficulty": "facile"}},
+            {"id": "n1_l2", "title": "Comparer et ranger des décimaux", "objectives": ["Utiliser <, > et =", "Ranger par ordre croissant/décroissant"], "content": {"theory": "On compare d'abord les parties entières, puis les décimales chiffre par chiffre.", "examples": ["12,45 < 12,5", "3,089 > 3,08"], "tips": "Compléter avec des zéros pour faciliter la comparaison."}, "quiz": {"count": 10, "passingScore": 7, "difficulty": "facile"}},
+            {"id": "n1_l3", "title": "Placer sur une demi-droite graduée", "objectives": ["Choisir une unité adaptée", "Repérer un nombre décimal"], "content": {"theory": "Une demi-droite graduée permet de visualiser l'ordre et la distance entre les nombres.", "examples": ["Graduer de 0 à 5 avec des pas de 0,5", "Placer 2,3 entre 2 et 2,5"], "tips": "Compter les petits traits pour connaître la précision."}, "quiz": {"count": 10, "passingScore": 7, "difficulty": "moyen"}},
+            {"id": "n1_l4", "title": "Encadrer et intercaler des décimaux", "objectives": ["Donner un encadrement à l'unité, au dixième près", "Trouver un nombre entre deux décimaux"], "content": {"theory": "On peut toujours trouver un nombre décimal entre deux autres.", "examples": ["2,3 < 2,34 < 2,4", "Encadrer 7,82 par 7,8 et 7,9"], "tips": "Ajouter un chiffre à la fin pour intercaler."}, "quiz": {"count": 10, "passingScore": 7, "difficulty": "moyen"}},
+            {"id": "n1_l5", "title": "Arrondir un nombre décimal", "objectives": ["Arrondir à l'unité, au dixième, au centième", "Comprendre la règle du chiffre suivant"], "content": {"theory": "Si le chiffre suivant est ≥5, on arrondit au supérieur. Sinon, on garde.", "examples": ["3,47 → 3,5 (dixième)", "8,921 → 9 (unité)"], "tips": "Barrer les chiffres après l'arrondi demandé."}, "quiz": {"count": 10, "passingScore": 7, "difficulty": "moyen"}}
+          ]
+        },
+        {
+          "id": "th_fractions",
+          "name": "Les fractions",
+          "lessons": [
+            {"id": "f1_l1", "title": "Découvrir les fractions simples", "objectives": ["Lire et écrire une fraction", "Associer fraction et partage"], "content": {"theory": "Une fraction représente le partage d'une unité en parts égales.", "examples": ["1/2 = une moitié", "3/4 = trois quarts"], "tips": "Numérateur = parts prises, Dénominateur = parts totales."}, "quiz": {"count": 10, "passingScore": 7, "difficulty": "facile"}},
+            {"id": "f1_l2", "title": "Fractions et nombres décimaux", "objectives": ["Convertir fraction en décimal", "Identifier les fractions décimales"], "content": {"theory": "Une fraction décimale a pour dénominateur 10, 100 ou 1000.", "examples": ["7/10 = 0,7", "25/100 = 0,25"], "tips": "Diviser le numérateur par le dénominateur."}, "quiz": {"count": 10, "passingScore": 7, "difficulty": "moyen"}},
+            {"id": "f1_l3", "title": "Comparer et ranger des fractions", "objectives": ["Comparer au même dénominateur", "Utiliser la droite graduée"], "content": {"theory": "À dénominateur égal, plus le numérateur est grand, plus la fraction est grande.", "examples": ["3/5 < 4/5", "2/3 > 1/3"], "tips": "Placer sur une demi-droite pour visualiser."}, "quiz": {"count": 10, "passingScore": 7, "difficulty": "moyen"}},
+            {"id": "f1_l4", "title": "Fraction d'une quantité", "objectives": ["Calculer une fraction d'un nombre", "Résoudre des problèmes concrets"], "content": {"theory": "Pour calculer a/b de Q, on fait (Q ÷ b) × a.", "examples": ["3/4 de 20 = (20÷4)×3 = 15"], "tips": "Toujours diviser d'abord par le dénominateur."}, "quiz": {"count": 10, "passingScore": 7, "difficulty": "moyen"}},
+            {"id": "f1_l5", "title": "Fractions équivalentes", "objectives": ["Reconnaître des écritures égales", "Simplifier ou amplifier"], "content": {"theory": "Multiplier ou diviser numérateur et dénominateur par un même nombre ≠0 ne change pas la valeur.", "examples": ["1/2 = 2/4 = 50/100"], "tips": "Chercher le même multiplicateur ou diviseur."}, "quiz": {"count": 10, "passingScore": 7, "difficulty": "difficile"}}
+          ]
+        },
+        {
+          "id": "th_operations",
+          "name": "Les quatre opérations",
+          "lessons": [
+            {"id": "o1_l1", "title": "Addition et soustraction de décimaux", "objectives": ["Aligner les virgules", "Retenir correctement"], "content": {"theory": "On pose l'opération en alignant les virgules. Les trous se remplissent avec des zéros.", "examples": ["12,4 + 3,87 = 16,27"], "tips": "La virgule reste à la même place au résultat."}, "quiz": {"count": 10, "passingScore": 7, "difficulty": "facile"}},
+            {"id": "o1_l2", "title": "Multiplication par un entier", "objectives": ["Poser une multiplication décimal × entier", "Placer la virgule au résultat"], "content": {"theory": "On multiplie sans virgule, puis on replace autant de chiffres décimaux que dans le facteur.", "examples": ["3,24 × 5 = 16,20 = 16,2"], "tips": "Compter les chiffres après la virgule avant de calculer."}, "quiz": {"count": 10, "passingScore": 7, "difficulty": "facile"}},
+            {"id": "o1_l3", "title": "Multiplication de deux décimaux", "objectives": ["Multiplier décimal × décimal", "Estimer l'ordre de grandeur"], "content": {"theory": "Même règle : on ignore les virgules, puis on replace le total des décimales.", "examples": ["2,5 × 0,4 = 1,00 = 1"], "tips": "Vérifier avec un ordre de grandeur."}, "quiz": {"count": 10, "passingScore": 7, "difficulty": "moyen"}},
+            {"id": "o1_l4", "title": "Division euclidienne", "objectives": ["Poser une division à un chiffre", "Identifier quotient et reste"], "content": {"theory": "a = b × q + r avec 0 ≤ r < b.", "examples": ["37 ÷ 5 : q=7, r=2"], "tips": "Vérifier : diviseur × quotient + reste = dividende."}, "quiz": {"count": 10, "passingScore": 7, "difficulty": "moyen"}},
+            {"id": "o1_l5", "title": "Division décimale", "objectives": ["Diviser un décimal par un entier", "Pousser la division après la virgule"], "content": {"theory": "Quand on abaisse le chiffre des dixièmes, on place la virgule au quotient.", "examples": ["14,6 ÷ 4 = 3,65"], "tips": "Ajouter des zéros si besoin pour continuer."}, "quiz": {"count": 10, "passingScore": 7, "difficulty": "difficile"}}
+          ]
+        },
+        {
+          "id": "th_priorites",
+          "name": "Priorités opératoires et calcul mental",
+          "lessons": [
+            {"id": "p1_l1", "title": "Règles de priorité sans parenthèses", "objectives": ["Appliquer la priorité ×/÷ avant +/−", "Calculer de gauche à droite à priorité égale"], "content": {"theory": "Multiplications et divisions sont prioritaires sur additions et soustractions.", "examples": ["3 + 4 × 2 = 3 + 8 = 11"], "tips": "Souligner d'abord l'opération prioritaire."}, "quiz": {"count": 10, "passingScore": 7, "difficulty": "facile"}},
+            {"id": "p1_l2", "title": "Utilisation des parenthèses", "objectives": ["Calculer l'intérieur des parenthèses en premier", "Gérer les parenthèses imbriquées"], "content": {"theory": "Les parenthèses changent l'ordre naturel des opérations.", "examples": ["(3 + 4) × 2 = 7 × 2 = 14"], "tips": "Commencer toujours par la parenthèse la plus interne."}, "quiz": {"count": 10, "passingScore": 7, "difficulty": "moyen"}},
+            {"id": "p1_l3", "title": "Calcul mental : additions et soustractions", "objectives": ["Regrouper astucieusement", "Utiliser les compléments"], "content": {"theory": "On peut changer l'ordre pour faciliter le calcul.", "examples": ["38 + 17 + 2 = 38 + 2 + 17 = 57"], "tips": "Chercher les nombres qui font 10, 100, etc."}, "quiz": {"count": 10, "passingScore": 7, "difficulty": "facile"}},
+            {"id": "p1_l4", "title": "Calcul mental : multiplication", "objectives": ["Multiplier par 10, 100, 0,1, 0,01", "Utiliser la distributivité"], "content": {"theory": "×10 décale la virgule d'un rang à droite, ×0,1 d'un rang à gauche.", "examples": ["4,5 × 100 = 450", "12 × 15 = 12×10 + 12×5 = 180"], "tips": "Décomposer un facteur pour simplifier."}, "quiz": {"count": 10, "passingScore": 7, "difficulty": "moyen"}},
+            {"id": "p1_l5", "title": "Vérifier et estimer un résultat", "objectives": ["Donner un ordre de grandeur", "Utiliser la calculatrice à bon escient"], "content": {"theory": "Arrondir les nombres avant de calculer permet de vérifier la cohérence.", "examples": ["48,7 × 2,1 ≈ 50 × 2 = 100"], "tips": "Si le résultat est loin de l'estimation, vérifier."}, "quiz": {"count": 10, "passingScore": 7, "difficulty": "difficile"}}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "comp_donnees_proportion",
+      "name": "Modéliser et traiter des données",
+      "description": "Lire, interpréter et produire des tableaux, graphiques et résoudre des problèmes de proportionnalité.",
+      "themes": [
+        {
+          "id": "th_proportion",
+          "name": "Proportionnalité",
+          "lessons": [
+            {"id": "pr1_l1", "title": "Reconnaître une situation proportionnelle", "objectives": ["Identifier un tableau de proportionnalité", "Comprendre le coefficient"], "content": {"theory": "Deux grandeurs sont proportionnelles si on passe de l'une à l'autre en multipliant toujours par le même nombre.", "examples": ["Prix au kilo : 2kg=6€ → 1kg=3€ (coefficient 3)"], "tips": "Vérifier que les rapports sont égaux."}, "quiz": {"count": 10, "passingScore": 7, "difficulty": "facile"}},
+            {"id": "pr1_l2", "title": "Le tableau de proportionnalité", "objectives": ["Compléter un tableau", "Utiliser le coefficient ou les propriétés"], "content": {"theory": "On peut multiplier une ligne par un nombre, ou ajouter deux colonnes.", "examples": ["Si 3→9, alors 6→18 (×2)"], "tips": "Choisir la méthode la plus simple (coefficient ou linéarité)."}, "quiz": {"count": 10, "passingScore": 7, "difficulty": "facile"}},
+            {"id": "pr1_l3", "title": "La règle de trois", "objectives": ["Résoudre un problème avec 3 données connues", "Poser un produit en croix"], "content": {"theory": "Si a/b = c/x, alors x = (b×c)/a.", "examples": ["5 kg coûtent 12€. 3 kg coûtent ? → (12×3)/5 = 7,2€"], "tips": "Bien identifier les grandeurs de même nature."}, "quiz": {"count": 10, "passingScore": 7, "difficulty": "moyen"}},
+            {"id": "pr1_l4", "title": "Graphiques et proportionnalité", "objectives": ["Reconnaître un graphique proportionnel", "Lire des coordonnées"], "content": {"theory": "Un graphique proportionnel est une droite passant par l'origine.", "examples": ["Points alignés avec (0,0)"], "tips": "Si la droite ne passe pas par 0, ce n'est pas proportionnel."}, "quiz": {"count": 10, "passingScore": 7, "difficulty": "moyen"}},
+            {"id": "pr1_l5", "title": "Problèmes concrets de proportionnalité", "objectives": ["Modéliser une situation réelle", "Rédiger une réponse complète"], "content": {"theory": "Mettre en œuvre la méthode adaptée au contexte (coefficient, tableau, graphique).", "examples": ["Vitesse constante, recettes, conversions"], "tips": "Toujours vérifier l'unité de la réponse."}, "quiz": {"count": 10, "passingScore": 7, "difficulty": "difficile"}}
+          ]
+        },
+        {
+          "id": "th_pourcentages",
+          "name": "Pourcentages et échelles",
+          "lessons": [
+            {"id": "pe1_l1", "title": "Comprendre et écrire un pourcentage", "objectives": ["Lire x%", "Associer fraction/décimal/pourcentage"], "content": {"theory": "x% = x/100 = 0,01x.", "examples": ["25% = 25/100 = 0,25 = 1/4"], "tips": "Mémoriser les équivalents courants (10%, 25%, 50%, 75%)."}, "quiz": {"count": 10, "passingScore": 7, "difficulty": "facile"}},
+            {"id": "pe1_l2", "title": "Calculer un pourcentage d'une quantité", "objectives": ["Appliquer la formule", "Utiliser le coefficient multiplicateur"], "content": {"theory": "x% de Q = Q × (x/100).", "examples": ["30% de 50 = 50 × 0,30 = 15"], "tips": "Calculer 10% d'abord, puis multiplier."}, "quiz": {"count": 10, "passingScore": 7, "difficulty": "moyen"}},
+            {"id": "pe1_l3", "title": "Augmenter et diminuer d'un pourcentage", "objectives": ["Calculer une remise ou une hausse", "Comprendre le coefficient"], "content": {"theory": "Augmenter de x% → multiplier par (1 + x/100). Diminuer → (1 - x/100).", "examples": ["+20% → ×1,2", "-15% → ×0,85"], "tips": "Ne pas additionner les pourcentages successifs."}, "quiz": {"count": 10, "passingScore": 7, "difficulty": "moyen"}},
+            {"id": "pe1_l4", "title": "Échelles et réductions", "objectives": ["Calculer une distance réelle ou sur plan", "Comprendre 1:n"], "content": {"theory": "Échelle = distance sur plan / distance réelle. Même unité obligatoire.", "examples": ["1/50000 → 1 cm sur plan = 50 000 cm réels"], "tips": "Convertir en mètres/km avant de conclure."}, "quiz": {"count": 10, "passingScore": 7, "difficulty": "moyen"}},
+            {"id": "pe1_l5", "title": "Vitesses moyennes", "objectives": ["Relier distance, temps et vitesse", "Convertir les unités"], "content": {"theory": "v = d/t. Attention aux unités (km/h, m/s, min, h).", "examples": ["120 km en 2h → 60 km/h"], "tips": "Toujours harmoniser les unités avant de calculer."}, "quiz": {"count": 10, "passingScore": 7, "difficulty": "difficile"}}
+          ]
+        },
+        {
+          "id": "th_graphiques",
+          "name": "Lecture de tableaux et graphiques",
+          "lessons": [
+            {"id": "tg1_l1", "title": "Lire un tableau à double entrée", "objectives": ["Repérer une donnée à l'intersection", "Extraire des informations"], "content": {"theory": "Un tableau croise deux critères. On lit en suivant ligne et colonne.", "examples": ["Effectifs par classe et par matière"], "tips": "Utiliser la règle ou le doigt pour ne pas se perdre."}, "quiz": {"count": 10, "passingScore": 7, "difficulty": "facile"}},
+            {"id": "tg1_l2", "title": "Diagrammes en bâtons et lignes", "objectives": ["Associer graphique et données", "Lire des valeurs approchées"], "content": {"theory": "Les bâtons/lignes montrent l'évolution ou la comparaison.", "examples": ["Évolution des températures sur une semaine"], "tips": "Vérifier l'échelle des axes avant de lire."}, "quiz": {"count": 10, "passingScore": 7, "difficulty": "facile"}},
+            {"id": "tg1_l3", "title": "Diagrammes circulaires", "objectives": ["Comprendre les angles et proportions", "Relier % et degrés"], "content": {"theory": "Un angle de x° représente (x/360) du total.", "examples": ["90° = 25% du cercle"], "tips": "360° = 100%. 1% = 3,6°."}, "quiz": {"count": 10, "passingScore": 7, "difficulty": "moyen"}},
+            {"id": "tg1_l4", "title": "Choisir le bon type de graphique", "objectives": ["Adapter la représentation à la question", "Justifier un choix"], "content": {"theory": "Comparaison → bâtons. Évolution → ligne. Répartition → circulaire.", "examples": ["Parts de marché → camembert"], "tips": "Le graphique doit répondre à une question précise."}, "quiz": {"count": 10, "passingScore": 7, "difficulty": "moyen"}},
+            {"id": "tg1_l5", "title": "Interpréter et critiquer un graphique", "objectives": ["Repérer les biais visuels", "Tirer une conclusion nuancée"], "content": {"theory": "Un axe tronqué ou une échelle trompeuse fausse la perception.", "examples": ["Axe Y qui ne commence pas à 0"], "tips": "Toujours vérifier les unités et l'échelle."}, "quiz": {"count": 10, "passingScore": 7, "difficulty": "difficile"}}
+          ]
+        },
+        {
+          "id": "th_statistiques",
+          "name": "Organisation de données et statistiques simples",
+          "lessons": [
+            {"id": "ts1_l1", "title": "Effectifs et fréquences", "objectives": ["Calculer un effectif total", "Exprimer une fréquence en %"], "content": {"theory": "Fréquence = (effectif de la valeur / effectif total) × 100.", "examples": ["15 sur 60 → 25%"], "tips": "La somme des fréquences vaut 100%."}, "quiz": {"count": 10, "passingScore": 7, "difficulty": "facile"}},
+            {"id": "ts1_l2", "title": "Moyenne arithmétique", "objectives": ["Calculer une moyenne simple", "Comprendre ce qu'elle représente"], "content": {"theory": "Moyenne = somme des valeurs / nombre de valeurs.", "examples": ["(12+15+18)/3 = 15"], "tips": "La moyenne ne remplace pas la répartition réelle."}, "quiz": {"count": 10, "passingScore": 7, "difficulty": "facile"}},
+            {"id": "ts1_l3", "title": "Médiane et étendue", "objectives": ["Trouver la valeur centrale", "Calculer l'écart entre max et min"], "content": {"theory": "Médiane : valeur du milieu après rangement. Étendue = max - min.", "examples": ["2, 5, 8 → médiane 5, étendue 6"], "tips": "Toujours ranger les données avant de chercher la médiane."}, "quiz": {"count": 10, "passingScore": 7, "difficulty": "moyen"}},
+            {"id": "ts1_l4", "title": "Regrouper des données en classes", "objectives": ["Construire un tableau de répartition", "Interpréter des tranches"], "content": {"theory": "On regroupe quand il y a trop de valeurs différentes.", "examples": ["Âges : [10-12[, [12-14[, ..."], "tips": "Les classes doivent se suivre sans trou ni chevauchement."}, "quiz": {"count": 10, "passingScore": 7, "difficulty": "moyen"}},
+            {"id": "ts1_l5", "title": "Tirer des conclusions d'une étude", "objectives": ["Synthétiser des indicateurs", "Rédiger une réponse argumentée"], "content": {"theory": "Croiser moyenne, médiane, étendue et graphiques pour analyser.", "examples": ["Classe A plus homogène que B (étendue plus faible)"], "tips": "Éviter les généralisations abusives."}, "quiz": {"count": 10, "passingScore": 7, "difficulty": "difficile"}}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "comp_geometrie_mesures",
+      "name": "Représenter et raisonner dans l'espace",
+      "description": "Construire, mesurer et calculer des grandeurs géométriques dans le plan et l'espace.",
+      "themes": [
+        {
+          "id": "th_droites_angles",
+          "name": "Droites, segments et angles",
+          "lessons": [
+            {"id": "da1_l1", "title": "Droites parallèles et perpendiculaires", "objectives": ["Utiliser les codages", "Construire avec l'équerre"], "content": {"theory": "Deux droites perpendiculaires forment un angle droit. Les parallèles ne se coupent jamais.", "examples": ["⊥ pour perpendiculaire, // pour parallèle"], "tips": "Vérifier avec l'équerre ou la règle graduée."}, "quiz": {"count": 10, "passingScore": 7, "difficulty": "facile"}},
+            {"id": "da1_l2", "title": "Médiatrice d'un segment", "objectives": ["Définir et construire", "Utiliser la propriété d'équidistance"], "content": {"theory": "Droite perpendiculaire au segment en son milieu. Tout point dessus est à égale distance des extrémités.", "examples": ["Construction au compas ou à l'équerre"], "tips": "La médiatrice est un axe de symétrie du segment."}, "quiz": {"count": 10, "passingScore": 7, "difficulty": "moyen"}},
+            {"id": "da1_l3", "title": "Mesurer et tracer un angle", "objectives": ["Utiliser le rapporteur", "Classifier les angles"], "content": {"theory": "Aigu < 90°, Droit = 90°, Obtus > 90°, Plat = 180°.", "examples": ["Lire sur le bon côté du rapporteur"], "tips": "Aligner le centre sur le sommet et le 0 sur un côté."}, "quiz": {"count": 10, "passingScore": 7, "difficulty": "facile"}},
+            {"id": "da1_l4", "title": "Bissectrice d'un angle", "objectives": ["Construire au compas ou rapporteur", "Comprendre le partage égal"], "content": {"theory": "Droite qui partage un angle en deux angles égaux.", "examples": ["Construction en 3 arcs de cercle"], "tips": "Vérifier que les deux angles obtenus sont identiques."}, "quiz": {"count": 10, "passingScore": 7, "difficulty": "moyen"}},
+            {"id": "da1_l5", "title": "Propriétés des angles et triangles", "objectives": ["Somme des angles d'un triangle = 180°", "Reconnaître un triangle isocèle/équilatéral"], "content": {"theory": "Dans un triangle, la somme des angles vaut toujours 180°.", "examples": ["Si 2 angles = 50° et 60°, le 3e = 70°"], "tips": "Toujours vérifier la somme avant de conclure."}, "quiz": {"count": 10, "passingScore": 7, "difficulty": "difficile"}}
+          ]
+        },
+        {
+          "id": "th_symetrie",
+          "name": "Symétrie et transformations",
+          "lessons": [
+            {"id": "sy1_l1", "title": "Symétrie axiale : définition", "objectives": ["Identifier un axe de symétrie", "Compléter une figure par pliage ou miroir"], "content": {"theory": "Deux points sont symétriques si l'axe est la médiatrice du segment les reliant.", "examples": ["Lettres A, M, T ont un axe vertical"], "tips": "Compter les carreaux perpendiculairement à l'axe."}, "quiz": {"count": 10, "passingScore": 7, "difficulty": "facile"}},
+            {"id": "sy1_l2", "title": "Construire le symétrique d'un point", "objectives": ["Utiliser équerre et compas", "Respecter distances et angles"], "content": {"theory": "On trace la perpendiculaire à l'axe, on reporte la même distance de l'autre côté.", "examples": ["A' symétrique de A par rapport à (d)"], "tips": "Codage obligatoire pour valider la construction."}, "quiz": {"count": 10, "passingScore": 7, "difficulty": "moyen"}},
+            {"id": "sy1_l3", "title": "Symétriques de figures usuelles", "objectives": ["Construire le symétrique d'un segment, cercle, polygone"], "content": {"theory": "La symétrie conserve les longueurs, angles et aires.", "examples": ["Symétrique d'un cercle = cercle de même rayon"], "tips": "Transformer les points clés, puis relier."}, "quiz": {"count": 10, "passingScore": 7, "difficulty": "moyen"}},
+            {"id": "sy1_l4", "title": "Axes de symétrie des polygones", "objectives": ["Trouver le nombre d'axes selon la figure", "Distinguer régulier et irrégulier"], "content": {"theory": "Triangle équilatéral : 3 axes. Carré : 4. Rectangle : 2.", "examples": ["Losange : 2 axes (diagonales)"], "tips": "Un axe doit partager la figure en 2 moitiés superposables."}, "quiz": {"count": 10, "passingScore": 7, "difficulty": "moyen"}},
+            {"id": "sy1_l5", "title": "Symétrie et pavages", "objectives": ["Reconnaître des motifs symétriques", "Créer un motif par translation/symétrie"], "content": {"theory": "La symétrie permet de générer des frises et pavages réguliers.", "examples": ["Carrelage, papier peint, logos"], "tips": "Identifier l'unité de base qui se répète."}, "quiz": {"count": 10, "passingScore": 7, "difficulty": "difficile"}}
+          ]
+        },
+        {
+          "id": "th_perimetres",
+          "name": "Périmètres et aires",
+          "lessons": [
+            {"id": "pa1_l1", "title": "Périmètre des polygones", "objectives": ["Calculer P rectangle, carré, triangle", "Utiliser les formules"], "content": {"theory": "P = somme des côtés. Carré : 4×c. Rectangle : 2×(L+l).", "examples": ["Carré de 5cm → P = 20cm"], "tips": "Vérifier que toutes les unités sont identiques."}, "quiz": {"count": 10, "passingScore": 7, "difficulty": "facile"}},
+            {"id": "pa1_l2", "title": "Aire du carré et du rectangle", "objectives": ["Appliquer A = c×c et A = L×l", "Convertir les unités d'aire"], "content": {"theory": "L'aire se mesure en unités carrées (cm², m², etc.).", "examples": ["Rectangle 6×4 = 24 cm²"], "tips": "1 m² = 10 000 cm². Attention aux conversions !"}, "quiz": {"count": 10, "passingScore": 7, "difficulty": "facile"}},
+            {"id": "pa1_l3", "title": "Aire du triangle et du disque", "objectives": ["Utiliser (b×h)/2", "Appliquer π×r²"], "content": {"theory": "Triangle : moitié du rectangle. Disque : π ≈ 3,14.", "examples": ["Triangle base 8, hauteur 5 → A = 20"], "tips": "La hauteur est toujours perpendiculaire à la base."}, "quiz": {"count": 10, "passingScore": 7, "difficulty": "moyen"}},
+            {"id": "pa1_l4", "title": "Figures composées et décomposition", "objectives": ["Calculer l'aire d'une figure complexe", "Additionner ou soustraire des aires"], "content": {"theory": "On découpe en figures connues, on calcule chaque partie.", "examples": ["L = rectangle grand - rectangle manquant"], "tips": "Coder les longueurs manquantes avant de calculer."}, "quiz": {"count": 10, "passingScore": 7, "difficulty": "moyen"}},
+            {"id": "pa1_l5", "title": "Périmètre et aire : problèmes concrets", "objectives": ["Distinguer contour et surface", "Choisir la bonne formule"], "content": {"theory": "Clôture = périmètre. Peinture/Tapis = aire.", "examples": ["Tour d'un champ vs semence"], "tips": "Lire la question en dernier pour ne pas confondre P et A."}, "quiz": {"count": 10, "passingScore": 7, "difficulty": "difficile"}}
+          ]
+        },
+        {
+          "id": "th_volumes",
+          "name": "Volumes et solides usuels",
+          "lessons": [
+            {"id": "vo1_l1", "title": "Patrons et représentation dans l'espace", "objectives": ["Reconnaître un patron valide", "Passer de 2D à 3D"], "content": {"theory": "Un patron est le déploiement à plat d'un solide.", "examples": ["Cube : 6 carrés assemblés"], "tips": "Vérifier que les faces opposées ne sont pas adjacentes."}, "quiz": {"count": 10, "passingScore": 7, "difficulty": "facile"}},
+            {"id": "vo1_l2", "title": "Le cube et le pavé droit", "objectives": ["Identifier faces, arêtes, sommets", "Calculer le volume"], "content": {"theory": "V_cube = c³. V_pavé = L×l×h.", "examples": ["Pavé 3×2×4 → V = 24 unités³"], "tips": "1 dm³ = 1 L. Lien volume/contenance."}, "quiz": {"count": 10, "passingScore": 7, "difficulty": "facile"}},
+            {"id": "vo1_l3", "title": "Conversions de volumes et contenances", "objectives": ["Maîtriser le tableau m³, dm³, cm³, L, mL", "Convertir correctement"], "content": {"theory": "Chaque rang saute de 3 zéros. 1 L = 1 dm³.", "examples": ["2,5 L = 2500 mL = 2500 cm³"], "tips": "Placer la virgule dans la bonne colonne avant de décaler."}, "quiz": {"count": 10, "passingScore": 7, "difficulty": "moyen"}},
+            {"id": "vo1_l4", "title": "Volume du cylindre de révolution", "objectives": ["Appliquer V = π×r²×h", "Identifier rayon et hauteur"], "content": {"theory": "Le cylindre est un empilement de disques.", "examples": ["r=3cm, h=10cm → V ≈ 282,6 cm³"], "tips": "Ne pas oublier d'élever le rayon au carré."}, "quiz": {"count": 10, "passingScore": 7, "difficulty": "moyen"}},
+            {"id": "vo1_l5", "title": "Problèmes de volume et d'emballage", "objectives": ["Optimiser un rangement", "Calculer un nombre de boîtes"], "content": {"theory": "On divise le volume total par le volume unitaire (sans oubli des contraintes réelles).", "examples": ["Combien de cubes de 2cm dans une boîte 10×8×6 ?"], "tips": "Vérifier l'alignement physique, pas juste le volume."}, "quiz": {"count": 10, "passingScore": 7, "difficulty": "difficile"}}
+          ]
+        }
+      ]
+    }
+  ]
+}
