@@ -1,126 +1,62 @@
-/* ===== VARIABLES & RESET ===== */
 :root {
-  --primary-gradient: linear-gradient(135deg, #4f46e5, #3b82f6);
-  --button-color: #3498db;
-  --button-hover: #2980b9;
-  --glass-bg: rgba(255, 255, 255, 0.85);
-  --shadow-sm: 0 4px 10px rgba(0,0,0,0.2);
-  --shadow-md: 0 4px 15px rgba(0,0,0,0.1);
-  --border-radius: 10px;
-  --transition: all 0.3s ease;
+  --primary: #4f46e5;
+  --primary-dark: #4338ca;
+  --success: #16a34a;
+  --error: #dc2626;
+  --bg: #f8fafc;
+  --text: #0f172a;
+  --card: #ffffff;
+  --border: #e2e8f0;
 }
 
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); line-height: 1.5; padding-bottom: 2rem; }
+
+header { background: var(--primary); color: white; padding: 1.5rem 1rem; text-align: center; }
+header h1 { font-size: 1.8rem; margin-bottom: 0.3rem; }
+.subtitle { opacity: 0.9; font-size: 0.95rem; }
+
+main { max-width: 800px; margin: 1.5rem auto; padding: 0 1rem; }
+
+.hidden { display: none !important; }
+
+.button-group, .button-grid { display: flex; flex-wrap: wrap; gap: 0.8rem; margin: 1rem 0; justify-content: center; }
+.button-group button, .button-grid button {
+  flex: 1 1 45%; padding: 1rem; font-size: 1rem; border: 2px solid var(--border);
+  background: var(--card); border-radius: 12px; cursor: pointer; transition: 0.2s;
 }
+.button-grid button:hover, .button-group button:hover { border-color: var(--primary); transform: translateY(-2px); }
+.button-grid button:disabled { opacity: 0.5; cursor: not-allowed; transform: none; }
 
-/* ===== BODY & BACKGROUND ===== */
-body {
-  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
-  background: url("bg.jpg") no-repeat center/cover fixed;
-  min-height: 100vh;
-  color: #fff;
-  overflow-x: hidden;
-  display: flex;
-  flex-direction: column;
-  line-height: 1.6;
+.back-btn, .quiz-btn, .btn-next, .retry-btn {
+  display: block; width: 100%; padding: 0.8rem; margin-top: 1rem; border: none;
+  border-radius: 8px; font-size: 1rem; cursor: pointer; background: var(--primary); color: white;
 }
+.back-btn { background: #64748b; width: auto; padding: 0.5rem 1rem; margin-top: 0.5rem; }
+.quiz-btn { background: var(--success); font-weight: bold; }
+.quiz-btn:hover, .btn-next:hover { opacity: 0.9; }
 
-/* Overlay */
-body::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.5);
-  z-index: -1;
-  transition: var(--transition);
-}
+.quiz-progress { background: var(--card); padding: 0.8rem; border-radius: 8px; margin-bottom: 1rem; }
+progress { width: 100%; height: 8px; margin-top: 0.3rem; border-radius: 4px; accent-color: var(--primary); }
 
-/* ===== HEADER ===== */
-header {
-  background: var(--primary-gradient);
-  color: white;
-  padding: 1rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  box-shadow: var(--shadow-sm);
-  border-radius: 0 0 var(--border-radius) var(--border-radius);
-  position: relative;
-  z-index: 10;
-}
+.answers-grid { display: grid; gap: 0.8rem; margin: 1rem 0; }
+.answer-btn { padding: 1rem; background: var(--card); border: 2px solid var(--border); border-radius: 8px; cursor: pointer; text-align: left; transition: 0.2s; }
+.answer-btn:hover:not(:disabled) { border-color: var(--primary); }
+.answer-btn.correct { background: #dcfce7; border-color: var(--success); }
+.answer-btn.incorrect { background: #fee2e2; border-color: var(--error); }
 
-/* ===== BUTTONS ===== */
-button {
-  margin: 0.5rem;
-  padding: 0.6rem 1.2rem;
-  border: none;
-  background: var(--button-color);
-  color: white;
-  border-radius: var(--border-radius);
-  cursor: pointer;
-  transition: var(--transition);
-  font-weight: 500;
-  font-size: 0.9rem;
-}
+.feedback { padding: 0.8rem; border-radius: 8px; margin: 1rem 0; text-align: center; font-weight: 500; }
+.feedback.success { background: #dcfce7; color: var(--success); }
+.feedback.error { background: #fee2e2; color: var(--error); }
 
-button:hover {
-  background: var(--button-hover);
-  transform: translateY(-2px);
-  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-}
+.score-display { background: var(--card); padding: 1.5rem; border-radius: 12px; text-align: center; margin: 1rem 0; font-size: 1.2rem; }
+.status-pass { color: var(--success); font-weight: bold; }
+.status-fail { color: #d97706; font-weight: bold; }
 
-button:active {
-  transform: translateY(0);
-}
+.tip-box { background: #eff6ff; border-left: 4px solid var(--primary); padding: 0.8rem; margin: 1rem 0; border-radius: 0 8px 8px 0; }
+.badge { background: var(--primary); color: white; padding: 2px 6px; border-radius: 10px; font-size: 0.75rem; margin-left: 6px; }
+.nav-btn.completed { border-color: var(--success); background: #f0fdf4; }
 
-/* ===== CARDS ===== */
-.card {
-  background: var(--glass-bg);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  border-radius: calc(var(--border-radius) + 5px);
-  padding: 1.5rem;
-  margin: 1rem;
-  color: #333;
-  box-shadow: var(--shadow-md);
-  transition: var(--transition);
-}
-
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
-}
-
-/* ===== GRID SYSTEM ===== */
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 1rem;
-  padding: 1rem;
-}
-
-/* ===== INPUTS ===== */
-input {
-  padding: 0.6rem 1rem;
-  border-radius: var(--border-radius);
-  border: none;
-  outline: none;
-  font-size: 0.9rem;
-  width: 100%;
-  margin: 0.5rem 0;
-}
-
-/* ===== RESPONSIVE ===== */
-@media (max-width: 600px) {
-  header {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  button {
-    width: 100%;
-  }
+@media (min-width: 600px) {
+  .button-group button, .button-grid button { flex: 1 1 30%; }
 }
